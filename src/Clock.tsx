@@ -8,7 +8,7 @@ const Clock = (props: { className: string }) => {
   useEffect(() => {
     let interval: null | number = null;
     if (pause && clock >= 0) {
-      interval = setInterval(() => {
+      interval = window.setInterval(() => {
         setClock(() => clock - 1);
       }, 1000);
     }
